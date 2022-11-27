@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import getRequest from '../../utility/getRequest';
 import { IPokemonInfos, IPokemonType, IProps, ISpecieInfos } from '../../interfaces/Card';
+import './style.scss';
 
 function Card({ name, urlMoreInfos,offsetParam }: IProps): JSX.Element {
 	const [pokemonInfos, setPokemonInfos] = useState<IPokemonInfos>();
@@ -22,13 +23,19 @@ function Card({ name, urlMoreInfos,offsetParam }: IProps): JSX.Element {
 		<div className='card'>
 			<header className='card__header'>
 				<h3 className='card__header-name'>{ name }</h3>
-				{pokemonInfos?.types.map((pokeType: IPokemonType): JSX.Element => {
-					return (
-						<div className='container' key={pokeType.slot + pokeType.type.name}>
-							<span className='card__header-pokemon-type'>{pokeType.type.name}</span>
-						</div>
-					);
-				})}
+				<div className='card__header-pokemon-type'>
+					{pokemonInfos?.types.map((pokeType: IPokemonType): JSX.Element => {
+						return (
+							<span 
+								className='card__header-pokemon-type-text'  
+								key={pokeType.slot + pokeType.type.name}>
+									
+								{pokeType.type.name}
+
+							</span>
+						);
+					})}
+				</div>
 
 				<img 
 					className='card__header-img' 

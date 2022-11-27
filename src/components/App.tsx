@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../css/global.scss';
 import { IPokemonResults } from '../interfaces/App';
 import getRequest from '../utility/getRequest';
 import Card from './Card';
@@ -13,7 +14,7 @@ function App(): JSX.Element  {
 	},[]);
 	
 	return (
-		<section>
+		<section className='cards'>
 			{results.map((result: IPokemonResults, index: number): JSX.Element => (
 				<Card 
 					key={index+result.name} 
