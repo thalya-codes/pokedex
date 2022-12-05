@@ -1,9 +1,8 @@
 import axios from 'axios';
 
-async function getRequest(url: string, offset: number) {
-	const params = {limit: 6, offset: offset};
+async function getRequest(url: string, limit: number, offset: number) {
+	const params = {limit, offset};
 	const data = await	axios.get(url, { params }).then(response => response.data);
-	console.log(data);
 	
 	return data;
 }

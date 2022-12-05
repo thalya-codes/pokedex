@@ -1,7 +1,8 @@
 export interface IProps {
     name: string;
     urlMoreInfos: string;
-    offsetParam: number;
+    limit: number;
+    offset: number
 }
 
 export interface IPokemonInfos {

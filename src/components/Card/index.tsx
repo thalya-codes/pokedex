@@ -3,19 +3,19 @@ import getRequest from '../../utility/getRequest';
 import { IPokemonInfos, IPokemonType, IProps, ISpecieInfos } from '../../interfaces/Card';
 import './style.scss';
 
-function Card({ name, urlMoreInfos,offsetParam }: IProps): JSX.Element {
+function Card({ name, urlMoreInfos,limit, offset }: IProps): JSX.Element {
 	const [pokemonInfos, setPokemonInfos] = useState<IPokemonInfos>();
 	const [speciesInfos, setSpeciesInfos] = useState<ISpecieInfos>();
 	const speciesURL = pokemonInfos?.species.url;
 	
 	useEffect(() => {
-		getRequest(urlMoreInfos, offsetParam)
+		getRequest(urlMoreInfos, limit, offset)
 			.then(data => setPokemonInfos(data));
 
 	},[]);	
 
 	useEffect(() => {
-		getRequest(speciesURL || '', offsetParam)
+		getRequest(speciesURL || '', limit, offset)
 			.then(data => setSpeciesInfos(data));	
 	}, [pokemonInfos]);		
 
