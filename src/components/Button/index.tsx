@@ -1,6 +1,7 @@
 import React from 'react';
 import { IProps } from '../../interfaces/Button';
-import '../../css/global.scss';
+import './style.scss';
+
 const max_buttons = 5;
 const side_buttons_quant = (max_buttons - 1) / 2;
 
@@ -13,11 +14,15 @@ function Button({  limit, offset ,total_page, setOffset }: IProps) {
 	const onChangePage = (page: number):void => {
 		setOffset((page - 1) * limit);
 	};
-	
+
 	return (
-		<div>
+		<div className='buttons-container'>
 			<li>
 				<button
+					className='
+						buttons-container__button
+						buttons-container__button--prev-next
+					'
 					onClick={() => onChangePage(currentPage - 1)}
 					disabled={currentPage === 1}
 				>Prev</button>
@@ -28,7 +33,8 @@ function Button({  limit, offset ,total_page, setOffset }: IProps) {
 					.map((page: number) => (
 						<li key={page++}>
 							<button
-								className={page+1 === currentPage ? 'test' : ''}
+								className={`
+									buttons-container__button ${page+1 === currentPage ? 'buttons-container__button--active' : ''}`}
 								onClick={() => onChangePage(page) }
 							>{page+1}</button>
 						</li>
@@ -36,6 +42,10 @@ function Button({  limit, offset ,total_page, setOffset }: IProps) {
 			}
 			<li>
 				<button 
+					className='
+						buttons-container__button
+						buttons-container__button--prev-next
+					'
 					onClick={() => onChangePage(currentPage + 1)}
 					disabled={currentPage === pages}
 				>Next</button>
