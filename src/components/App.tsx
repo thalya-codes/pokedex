@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import '../css/global.scss';
+
 import { IPokemonResults } from '../interfaces/App';
 import getRequest from '../utility/getRequest';
+
 import Button from './Button';
 import Card from './Card';
+
+import '../style/global.scss';
+import './app.scss';
+
 
 function App(): JSX.Element  {
 	const URL= 'https://pokeapi.co/api/v2/pokemon';
