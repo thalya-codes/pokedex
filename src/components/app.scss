@@ -1,7 +1,11 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .cards {    
-  width: 88vw;
+  width: 100%;
   display: grid;
   
-  grid-template-columns: repeat(auto-fit, minmax(400px, 4fr)); 
-  margin: 0 10%;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 4fr)); 
 }

@@ -29,24 +29,26 @@ function App(): JSX.Element  {
 
 
 	return (
-		<section className='cards'>
-			{results.map((result: IPokemonResults, index: number): JSX.Element => (
-				<Card 
-					key={index+result.name} 
-					name={result.name} 
-					urlMoreInfos={result.url} 
+		<div className="container">
+			<main className='cards'>
+				{results.map((result: IPokemonResults, index: number): JSX.Element => (
+					<Card 
+						key={index+result.name} 
+						name={result.name} 
+						urlMoreInfos={result.url} 
+						limit={limit}
+						offset={offset}
+					/>
+				))}
+
+				<Button
 					limit={limit}
 					offset={offset}
+					setOffset={setOffset}
+					total_page={totalPage}
 				/>
-			))}
-
-			<Button
-				limit={limit}
-				offset={offset}
-				setOffset={setOffset}
-				total_page={totalPage}
-			/>
-		</section>
+			</main>
+		</div>
 	);
 }
 

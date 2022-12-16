@@ -3,19 +3,16 @@
 .card {
     margin: calc($spacing-20 + $spacing-15) auto;   
 
-    .container {
-        margin-bottom: $spacing-40;
-    }
-
-    &__header {  
-        height: 222px;
-        width: 320px;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
 
         background-color: $bg-light-purple;
         border-radius: $border-radius-sm;
 
-        padding: $spacing-20;
-        margin-bottom: calc($spacing-40 + $spacing-10); 
+        padding: $spacing-10 $spacing-20;
+        margin: 0 auto 10% auto;
 
         &::first-letter {
             text-transform: uppercase;
@@ -34,14 +31,15 @@
                     margin-left: $spacing-15;
                 }
             }
-        }
+        }   
 
         &-img {
-            width: 60%;
-            margin-bottom: $spacing-40;
+            width: 55%;            
+            align-self: center;
 
             filter: drop-shadow(0 0 0.75rem rgba(164, 101, 101, 0.781));
-        }
+        }       
+        
     }
 
     &__content {        
@@ -49,13 +47,17 @@
             &-label {
                 color: red;           
             }
+
+            &-container {
+                width: 80%;                
+                margin: 0 auto $spacing-40 auto;
+            }
             
             &-item { 
                 display: block;
                 margin: $spacing-20 12px auto $spacing-20;
              
-                border-bottom: 1px solid #ccc;
-                width: 30%;
+                border-bottom: 1px solid #ccc;                
 
                 &:hover {
                     background-color: rgba(204, 204, 204, 0.464);
@@ -65,5 +67,5 @@
                                   
             }
         }
-    }
+    }    
 }

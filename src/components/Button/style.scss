@@ -1,37 +1,37 @@
 @import '../../style/_variables';
 
 .buttons-container {
-    width: 80vw;
+    width: 88vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin-bottom: calc($spacing-40);
-
+    margin: 0 auto $spacing-40 auto;
+   
     &__button {
         width: 60px;
-        
         padding: 4px 0;
         margin-right: calc($spacing-20 + $spacing-10);
         
-        background-color: $bg-light-yellow;
-        border: none;   
-        border-radius: $border-radius-sm;
+        background-color: $bg-light-yellow;        
         
+        border: none;   
+        border-radius: $border-radius-sm;        
+     
         cursor: pointer;
 
         &--active {
             background-color: $bg-medium-purple;
         }
 
-        &--prev-next {
-            background-color: $bg-yellow-base;
-        }
-
         &:disabled {
             background-color: rgba(255, 242, 0, 0.311);
             cursor: not-allowed;
         }
+
+        &--prev-next {
+            background-color: $bg-yellow-base;
+        }        
     }
 }

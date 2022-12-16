@@ -22,19 +22,22 @@ function Card({ name, urlMoreInfos,limit, offset }: IProps): JSX.Element {
 	return (
 		<div className='card'>
 			<header className='card__header'>
-				<h3 className='card__header-name'>{ name }</h3>
-				<div className='card__header-pokemon-type'>
-					{pokemonInfos?.types.map((pokeType: IPokemonType): JSX.Element => {
-						return (
-							<span 
-								className='card__header-pokemon-type-text'  
-								key={pokeType.slot + pokeType.type.name}>
-									
-								{pokeType.type.name}
+				<div className="card__header-title">
+					<h3 className='card__header-name'>{ name }</h3>
 
-							</span>
-						);
-					})}
+					<div className='card__header-pokemon-type'>
+						{pokemonInfos?.types.map((pokeType: IPokemonType): JSX.Element => {
+							return (
+								<span 
+									className='card__header-pokemon-type-text'  
+									key={pokeType.slot + pokeType.type.name}>
+										
+									{pokeType.type.name}
+
+								</span>
+							);
+						})}
+					</div>
 				</div>
 
 				<img 
@@ -46,7 +49,7 @@ function Card({ name, urlMoreInfos,limit, offset }: IProps): JSX.Element {
 
 			<div className='card__content'>
 				<ul className='card__content-list'>
-					<div className='container'>
+					<div className='card__content-list-container'>
 						<span className='card__content-list-label'>Hability: </span>
 						{ pokemonInfos?.abilities.map((item, index: number):JSX.Element => {
 							return (
@@ -58,12 +61,12 @@ function Card({ name, urlMoreInfos,limit, offset }: IProps): JSX.Element {
 						}) }
 					</div>
 
-					<li className='container'>
+					<li className='card__content-list-container'>
 						<span className='card__content-list-label'>Caputure rate: </span>
 						<span className='card__content-list-item'>{speciesInfos?.capture_rate}</span>
 					</li>
 				
-					<li className='container'>
+					<li className='card__content-list-container'>
 						<span className='card__content-list-label'>Habitat: </span>						
 						{ 
 							speciesInfos?.habitat !== undefined 
