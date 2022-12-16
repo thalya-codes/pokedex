@@ -34,4 +34,11 @@
             background-color: $bg-yellow-base;
         }        
     }
+
+    @media (max-width: 768px) {
+        &__button {
+            width: 45px;
+            margin-right: $spacing-20;
+        }
+    }
 }

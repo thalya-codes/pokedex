@@ -67,5 +67,15 @@
                                   
             }
         }
-    }    
+    }
+    
+    @media (max-width: 768px) {
+        width: 90%;
+                
+        margin: $spacing-15 auto;
+        
+        &__content-list-container, &__header {
+            width: 85%;
+        }
+    }
 }
