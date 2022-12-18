@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-import { IPokemonResults } from '../interfaces/App';
-import getRequest from '../utility/getRequest';
+import { IPokemonResults } from '../../interfaces/App';
+import getRequest from '../../utility/getRequest';
 
-import Button from './Button';
-import Card from './Card';
+import Button from '../Button';
+import Card from '../Card';
+import Header from '../Header';
 
-import '../style/global.scss';
-import './app.scss';
+import '../../style/global.scss';
+import './style.scss';
 
 
 function App(): JSX.Element  {
@@ -30,6 +31,7 @@ function App(): JSX.Element  {
 
 	return (
 		<div className="container">
+			<Header />
 			<main className='cards'>
 				{results.map((result: IPokemonResults, index: number): JSX.Element => (
 					<Card 
