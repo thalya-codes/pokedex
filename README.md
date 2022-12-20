@@ -1,55 +1,41 @@
+ ## Tecnologias utilizadas
 
-<h2 style="margin-bottom: 20px">Tecnologias utilizadas</h2>
-
-<section style="display: inline-flex; margin-bottom: 20px; gap: 10px;">
-  <img 
-    align="center" 
-    alt="React" 
-    height="40" 
-    width="40" 
-    src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/512/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
-  />
-
-  <img 
-    align="center" 
-    alt="Typescript" 
-    height="40" 
-    width="40" 
-    src="https://img.icons8.com/color/512/typescript.png"
-  />
-
-  <img 
-    align="center"
-    alt="Typescript" 
-    height="40" 
-    width="40"
-    src="https://img.icons8.com/color/512/sass.png"
-  />
+<section style="display: inline_block;">
+  
+  <img align="center" alt="React" height="40" width="40" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/512/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png">
+  
+  <img align="center" alt="Typescript" height="50" width="50" src="https://img.icons8.com/color/512/typescript.png">
+  
+  <img align="center" alt="Typescript" height="50" width="50" src="https://img.icons8.com/color/512/sass.png">
 </section>
+<br>
+
+
+## Preview  
 
 <section>
-  <h2 style="margin-top:20px">Preview</h2>
-  <a 
-    href="https://pokedex-seven-jade.vercel.app/"
-    style="color: hotpink; font-size: 16px;
-  >Demo</a>
-
-  <figure  style="margin: 55px 0;">
-    <figcaption style="font-weight: bold; margin-bottom: 10px;">Desktop</figcaption>
-
-    <img src="https://i.postimg.cc/csxX3ZHv/Fire-Shot-Capture-002-Pokedex-localhost.png">
-
-  </figure>
-
-  <figure style="margin: 55px 0;">
-    <figcaption style="font-weight: bold;"
-    >Mobile - Telas iguais ou menores que 768px</figcaption>
-
-    <img src="https://i.postimg.cc/rsX5s5hY/Fire-Shot-Capture-004-Pokedex-localhost.png">
-    
-  </figure>
+  
+  <h3><a href="https://pokedex-seven-jade.vercel.app/">Live demo</a></h3>
+  <br/>
+  
+  <p><strong>Desktop</strong></p>  
+  <img 
+    align="center" 
+    alt="Demonstração desktop" 
+    src="https://i.postimg.cc/SKP60Bc4/Fire-Shot-Capture-002-Pokedex-localhost.png"
+  />
+  
+ <br><br><br>  
+  
+  <p><strong>Mobile - Telas iguais ou menores que 768px</strong></p>
+  <img 
+    align="center" 
+    alt="Demonstração mobile"  
+    src="https://i.postimg.cc/rsX5s5hY/Fire-Shot-Capture-004-Pokedex-localhost.png"
+  />
 </section>
 
+  <br>  <br>
 
 <h2> Getting Started with Create React App</h2>
 
