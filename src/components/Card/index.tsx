@@ -11,7 +11,6 @@ function Card({ name, urlMoreInfos,limit, offset }: IProps): JSX.Element {
 	useEffect(() => {
 		getRequest(urlMoreInfos, limit, offset)
 			.then(data => setPokemonInfos(data));
-
 	},[]);	
 
 	useEffect(() => {
@@ -60,19 +59,18 @@ function Card({ name, urlMoreInfos,limit, offset }: IProps): JSX.Element {
 							);
 						}) }
 					</div>
-
-					<li className='card__content-list-container'>
-						<span className='card__content-list-label'>Caputure rate: </span>
-						<span className='card__content-list-item'>{speciesInfos?.capture_rate}</span>
-					</li>
-				
-					<li className='card__content-list-container'>
-						<span className='card__content-list-label'>Habitat: </span>						
-						{ 
-							speciesInfos?.habitat !== undefined 
-							&& <span className='card__content-list-item'>{speciesInfos?.habitat.name}</span> 
-						}
-					</li>					
+					{ speciesInfos?.capture_rate !== undefined &&
+						<li className='card__content-list-container'>
+							<span className='card__content-list-label'>Capture rate: </span>
+							<span className='card__content-list-item'>{speciesInfos?.capture_rate}</span>
+						</li>
+					}
+					{ speciesInfos?.habitat !== undefined &&
+						<li className='card__content-list-container'>
+							<span className='card__content-list-label'>Habitat: </span>						
+							<span className='card__content-list-item'>{speciesInfos?.habitat.name}</span> 
+						</li>
+					}
 				</ul>
 			</div>
 		</div>

@@ -10,7 +10,6 @@ import Header from '../Header';
 import '../../style/global.scss';
 import './style.scss';
 
-
 function App(): JSX.Element  {
 	const URL= 'https://pokeapi.co/api/v2/pokemon';
 	const limit = 6;
