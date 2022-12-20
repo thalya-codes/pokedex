@@ -11,12 +11,12 @@ function Card({ name, urlMoreInfos,limit, offset }: IProps): JSX.Element {
 	useEffect(() => {
 		getRequest(urlMoreInfos, limit, offset)
 			.then(data => setPokemonInfos(data));
-	},[]);	
+	});	
 
 	useEffect(() => {
 		getRequest(speciesURL || '', limit, offset)
 			.then(data => setSpeciesInfos(data));	
-	}, [pokemonInfos]);		
+	}, [limit, offset, pokemonInfos, speciesURL]);		
 
 	return (
 		<div className='card'>
