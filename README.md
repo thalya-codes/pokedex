@@ -1,4 +1,3 @@
-
 <h2 style="margin-bottom: 20px">Tecnologias utilizadas</h2>
 
 <section style="display: inline-flex; margin-bottom: 20px; gap: 10px;">
@@ -10,7 +9,7 @@
     src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/512/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
   />
 
-  <img 
+<img 
     align="center" 
     alt="Typescript" 
     height="40" 
@@ -18,13 +17,14 @@
     src="https://img.icons8.com/color/512/typescript.png"
   />
 
-  <img 
+<img 
     align="center"
     alt="Typescript" 
     height="40" 
     width="40"
     src="https://img.icons8.com/color/512/sass.png"
   />
+
 </section>
 
 <section>
@@ -46,10 +46,9 @@
     >Mobile - Telas iguais ou menores que 768px</figcaption>
 
     <img src="https://i.postimg.cc/rsX5s5hY/Fire-Shot-Capture-004-Pokedex-localhost.png">
-    
+
   </figure>
 </section>
-
 
 <h2> Getting Started with Create React App</h2>
 

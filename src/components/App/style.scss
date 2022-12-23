@@ -3,9 +3,9 @@
   margin: 0 auto;
 }
 
-.cards {    
+.cards {
   width: 100%;
   display: grid;
-  
-  grid-template-columns: repeat(auto-fit, minmax(350px, 4fr)); 
+
+  grid-template-columns: repeat(auto-fit, minmax(350px, 4fr));
 }
