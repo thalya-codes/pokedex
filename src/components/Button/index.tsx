@@ -36,10 +36,7 @@ function Button({ limit, offset, total_page, setOffset }: IProps) {
     <div className="buttons-container">
       <li>
         <button
-          className="
-						buttons-container__button
-						buttons-container__button--prev-next
-					"
+          className="buttons-container__button buttons-container__button--prev-next"
           onClick={() => onChangePage(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -51,9 +48,7 @@ function Button({ limit, offset, total_page, setOffset }: IProps) {
         .map((page: number) => (
           <li key={page++}>
             <button
-              className={`
-									buttons-container__button
-									${page + 1 === currentPage ? "buttons-container__button--active" : ""}`}
+              className={` buttons-container__button ${page + 1 === currentPage ? "buttons-container__button--active" : ""}`}
               onClick={() => onChangePage(page)}
             >
               {page + 1}
@@ -62,10 +57,7 @@ function Button({ limit, offset, total_page, setOffset }: IProps) {
         ))}
       <li>
         <button
-          className="
-						buttons-container__button
-						buttons-container__button--prev-next
-					"
+          className=" buttons-container__button buttons-container__button--prev-next"
           onClick={() => onChangePage(currentPage + 1)}
           disabled={currentPage === pages}
         >
